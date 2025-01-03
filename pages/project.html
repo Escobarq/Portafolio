@@ -7,21 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
             rel="stylesheet"
     />
-    <title>About</title>
+    <title>Projects</title>
 </head>
 <body>
 <div class="projects-grid">
-    <img class="project-card" alt="project1" src="../assets/jpeg/project1.jpeg">
-        <a class="project-overlay" href="#modal-inmobiliaria"></a>
-    </img>
-    <div id="modal-inmobiliaria" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close">&times;</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nihil id commodi ipsa vitae dolore
-                molestiae minus enim. Nulla ut recusandae nemo quam autem minus totam impedit, quod accusamus optio?</p>
+    <div class="project-card">
+        <img alt="project1" src="../assets/jpeg/project1.jpeg">
+        <a class="project-overlay" href="#modal-inmobiliaria">Ver Projecto</a>
+    </div>
+</div>
+
+<!-- Modal Inmobiliaria -->
+<div id="modal-inmobiliaria" class="modal-overlay">
+    <div class="modal-content">
+        <a href="#" class="close-button">&times;</a>
+        <div class="modal-image">
+            <img src="../assets/jpeg/project1.jpeg" alt="Project Image">
+        </div>
+        <div class="modal-details">
+            <div class="modal-header">
+                <h1 class="project-title">AdminMuebles</h1>
+                <h2 class="project-subtitle">Software de gestión inmuebles</h2>
+            </div>
+            <div class="tech-stack">
+                <h3 class="tech-title">Tecnologías utilizadas</h3>
+                <div class="tech-icons">
+                    <i class="fab fa-react tech-icon" title="React"></i>
+                    <i class="fab fa-node-js tech-icon" title="Node.js"></i>
+                    <i class="fab fa-js tech-icon" title="JavaScript"></i>
+                    <i class="fab fa-html5 tech-icon" title="HTML5"></i>
+                    <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
+                    <i class="fas fa-database tech-icon" title="Database"></i>
+                </div>
+            </div>
+            <div class="github-section">
+                <a href="#" class="github-link">
+                    <i class="fab fa-github"></i>
+                    Ver código en GitHub
+                </a>
+            </div>
         </div>
     </div>
 </div>

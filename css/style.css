@@ -10,6 +10,9 @@ body {
     color: white;
     font-family: system-ui, -apple-system, sans-serif;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -23,7 +26,7 @@ body {
     background: black;
     border-right: 1px solid rgb(39, 39, 42);
     height: 100vh;
-    padding: 1.5rem;
+    padding: 1rem;
     position: fixed;
     width: 12rem;
 }
@@ -90,10 +93,9 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    position: fixed;
-    left: 50%;
-    height: 100vh;
-    transform: translateX(-50%);
+    position: relative;
+    height: auto;
+    transform: none;
     box-sizing: border-box;
     overflow-y: auto;
     background-color: #000;
@@ -103,6 +105,13 @@ body {
 @media screen and (min-width: 768px) {
     .main-content {
         padding: 3rem;
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .main-content {
+        padding: 1rem;
     }
 }
 
@@ -163,6 +172,13 @@ body {
     gap: 1rem;
 }
 
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-card {
     aspect-ratio: 1;
     background: rgb(39, 39, 42);
@@ -181,16 +197,17 @@ img {
 
 .project-overlay {
     color: #ffffff;
-    text-underline: none;
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.2s;
-
 }
 
 .project-card:hover .project-overlay {
@@ -199,8 +216,8 @@ img {
 
 .contact-form {
     margin: 0 auto;
-    width: 100%; /* Cambio de 100vh a 100% */
-    max-width: 600px; /* Límite máximo más razonable */
+    width: 100%;
+    max-width: 600px;
     background: rgb(39, 39, 42);
     border-radius: 0.5rem;
     padding: 1.5rem;
@@ -210,7 +227,7 @@ img {
     .contact-form {
         padding: 1rem;
         margin: 1rem;
-        width: calc(100% - 2rem); /* Ajuste para márgenes */
+        width: calc(100% - 2rem);
     }
 }
 
@@ -288,52 +305,144 @@ img {
     }
 }
 
+.container-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem 20px;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .container-about {
+        padding: 1rem 10px;
+    }
+}
+
 .about-container {
     background: rgb(39, 39, 42);
     padding: 1.5rem;
     border-radius: 0.5rem;
     width: 100%;
-    max-width: fit-content;
+    max-width: 700px;
+    margin: 2rem auto;
+    height: fit-content;
 }
 
 /*Modal*/
-.modal {
-    display: none;
+
+.modal-overlay {
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Oculto por defecto */
     justify-content: center;
     align-items: center;
+    pointer-events: none; /* Deshabilita la interacción cuando está oculto */
+}
+
+.modal-overlay:target {
+    display: flex; /* Mostrar modal cuando es el objetivo */
+    pointer-events: auto; /* Habilita la interacción cuando está visible */
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-}
-
-.modal:target {
+    background-color: white;
+    border-radius: 4px;
+    max-width: 935px;
+    width: 90%;
+    height: 600px;
     display: flex;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.modal-image {
+    width: 60%;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details {
+    width: 40%;
+    border-left: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 4px;
+}
+
+.project-subtitle {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.tech-stack {
+    padding: 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.tech-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    font-size: 24px;
+    color: #262626;
+}
+
+.github-section {
+    padding: 16px;
+    margin-top: auto;
+    border-top: 1px solid #dbdbdb;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.github-link:hover {
+    color: #00376b;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
