@@ -8,11 +8,6 @@ async function renderAbout() {
   return await response.text();
 }
 
-async function renderContact() {
-  const response = await fetch("pages/contact.html");
-  return await response.text();
-}
-
 const tabContent = document.getElementById("tabContent");
 const tabButtons = document.querySelectorAll(".tab-button");
 
@@ -26,9 +21,6 @@ async function switchTab(tab) {
       break;
     case "about":
       tabContent.innerHTML = await renderAbout();
-      break;
-    case "contact":
-      tabContent.innerHTML = await renderContact();
       break;
   }
 }
@@ -59,8 +51,9 @@ menuButton.addEventListener("click", () => {
       `;
     mobileMenu.innerHTML = `
         <button class="nav-button" style="float: right">✕</button>
-        <nav style="margin-top: 3rem">
-           <button class="nav-button">
+        <nav>
+        <a style="color:#fff" href="https://acortar.link/qOYWru">
+        <button class="nav-button">
           <img
             src="public/assets/png/cv.png"
             style="width: 28px"
@@ -69,7 +62,9 @@ menuButton.addEventListener("click", () => {
           />
           CV
         </button>
-        <button class="nav-button">
+          <a>
+          <a style="color:#fff" href="https://www.linkedin.com/in/juan-david-escobar-quezada-380430302/">
+        <button class="nav-button" >
           <img
             src="public/assets/png/linkedid.png"
             style="width: 28px"
@@ -78,12 +73,23 @@ menuButton.addEventListener("click", () => {
           />
           LinkedIn
         </button>
+            </a>
+            <a style="color:#fff" href="https://acortar.link/neITj2">
+              <button class="nav-button" >
+                <img
+                  src="public/assets/png/whatsapp.png"
+                  style="width: 28px"
+                  height="28px"
+                  alt="Icon"
+                />
+                Whatsapp
+              </button>
+                  </a>
         <button class="nav-button">
-        <div class="profile-avatar-mobile">
-        </div>
+          <div class="profile-avatar-mobile"></div>
           Escobq
         </button>
-        </nav>
+      </nav>
       `;
     document.body.appendChild(mobileMenu);
 

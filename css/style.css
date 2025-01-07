@@ -98,25 +98,26 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  min-height: 100vh;
   position: relative;
-  height: auto;
-  transform: none;
+  height: 100%;
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-x: hidden;
   background-color: var(--color-two);
 }
 
-/* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {
   .main-content {
     padding: 3rem;
+    margin-left: 12rem;
+    width: calc(100% - 12rem);
+     min-height: 100vh;
   }
 }
-
-/* Media query para pantallas pequeñas */
 @media screen and (max-width: 767px) {
   .main-content {
     padding: 1rem;
+    width: 100%;
   }
 }
 
@@ -321,32 +322,101 @@ img {
     text-align: left;
   }
 }
-
-.container-about {
+/* Post Instagram */
+.post {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 2rem 20px;
+  flex-direction: column;
+  align-items: center;  /* Centra horizontalmente los posts */
+  gap: 20px;
+  margin: 20px auto;   /* Margen automático horizontal */
+  max-width: 470px;    /* Mismo ancho que post-container */
+  width: 100%;
 }
 
-/* Media query para pantallas pequeñas */
-@media screen and (max-width: 767px) {
-  .container-about {
-    padding: 1rem 10px;
+.post-container {
+  max-width: 470px;
+  width: 100%;
+  background: #000000;
+  border-radius: 8px;
+  border: 1px solid #262626;
+}
+
+@media (max-width: 480px) {
+  .post {
+    margin: 10px auto;
+    width: 95%;        /* Margen pequeño en móviles */
   }
 }
 
-.about-container {
-  background: rgb(39, 39, 42);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 700px;
-  margin: 2rem auto;
-  height: fit-content;
+.post-header {
+  padding: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #262626;
 }
 
+.post-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.time {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.content {
+  padding: 20px;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.meme-text {
+  font-size: 18px;
+  text-align: left;
+  padding: 10px;
+}
+
+.meme-text:last-child {
+  color: #ff6b6b;
+}
+
+.post-footer {
+  padding: 14px;
+  background: #000000;
+}
+
+.likes {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.comments {
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .post-container {
+      border-radius: 0;
+  }
+  
+  .meme-text {
+      font-size: 16px;
+  }
+}
 /*Modal*/
 .modal-overlay {
   position: fixed;
