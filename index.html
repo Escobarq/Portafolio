@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
-    <title>Escobarq</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <aside class="sidebar">
-      <div class="sidebar-profile">
-        <img src="public/assets/png/logo.png" class="sidebar-avatar"></img>
-        <span class="Logo">Instagrama</span>
-      </div>
-      <nav>
-        <a style="color:#fff" href="https://acortar.link/qOYWru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+  <title>Escobarq</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <img src="public/assets/png/logo.png" class="sidebar-avatar"></img>
+      <span class="logo">Instagrama</span>
+    </div>
+    <nav>
+      <a style="color:#fff" href="https://acortar.link/qOYWru">
         <button class="nav-button">
-          <img
-            src="public/assets/png/cv.png"
-            style="width: 28px"
-            height="28px"
-            alt="Icon"
-          />
+          <img src="public/assets/png/cv.png" style="width: 28px" height="28px" alt="Icon" />
           CV
         </button>
-          <a>
+        <a>
           <a style="color:#fff" href="https://www.linkedin.com/in/juan-david-escobar-quezada-380430302/">
-        <button class="nav-button" >
-          <img
-            src="public/assets/png/linkedid.png"
-            style="width: 28px"
-            height="28px"
-            alt="Icon"
-          />
-          LinkedIn
-        </button>
-            </a>
-            <a style="color:#fff" href="https://acortar.link/neITj2">
-              <button class="nav-button" >
-                <img
-                  src="public/assets/png/whatsapp.png"
-                  style="width: 28px"
-                  height="28px"
-                  alt="Icon"
-                />
-                Whatsapp
-              </button>
-                  </a>
-        <button class="nav-button">
-          <div class="profile-avatar-sidebard"></div>
-          Escobq
-        </button>
-      </nav>
-    </aside>
+            <button class="nav-button">
+              <img src="public/assets/png/linkedid.png" style="width: 28px" height="28px" alt="Icon" />
+              LinkedIn
+            </button>
+          </a>
+          <a style="color:#fff" href="https://acortar.link/neITj2">
+            <button class="nav-button">
+              <img src="public/assets/png/whatsapp.png" style="width: 28px" height="28px" alt="Icon" />
+              Whatsapp
+            </button>
+          </a>
+          <button class="nav-button">
+            <div class="profile-avatar-sidebard"></div>
+            Escobq
+          </button>
+    </nav>
+  </aside>
 
-    <header class="mobile-header">
-      <div class="mobile-profile">
-        <div class="mobile-avatar"></div>
-        <span>Instagrama</span>
+  <header class="mobile-header">
+    <div class="mobile-profile">
+      <div class="mobile-avatar"></div>
+      <span>Instagrama</span>
+    </div>
+    <button class="nav-button" id="menuButton">☰</button>
+  </header>
+
+  <main class="main-content">
+    <div class="profile-section">
+      <div class="profile-avatar">
+        <div class="profile-badge">Hola :)</div>
       </div>
-      <button class="nav-button" id="menuButton">☰</button>
-    </header>
-
-    <main class="main-content">
-      <div class="profile-section">
-        <div class="profile-avatar">
-          <div class="profile-badge">Hola :)</div>
-        </div>
-        <div>
-          <h2 style="font-size: 1.5rem; margin-bottom: 1rem">Escobq</h2>
-          <p style="color: rgb(161, 161, 170); max-width: 36rem">
-            Hola mucho gusto soy Juan David Escobar Quezada un colombiano de 22
-            años empezando en el mundo de desarrollo de software
-          </p>
-        </div>
+      <div>
+        <h2 style="font-size: 1.5rem; margin-bottom: 1rem">Escobq</h2>
+        <p style="color: rgb(161, 161, 170); max-width: 36rem">
+          Hola mucho gusto soy Juan David Escobar Quezada un colombiano de 22
+          años empezando en el mundo de desarrollo de software
+        </p>
       </div>
+    </div>
 
-      <nav class="tab-nav">
-        <button class="tab-button active" data-tab="projects">PROJECTOS</button>
-        <button class="tab-button" data-tab="about">ACERCA DE</button>
-      </nav>
+    <nav class="tab-nav">
+      <button class="tab-button active" data-tab="projects">PROJECTOS</button>
+      <button class="tab-button" data-tab="about">ACERCA DE</button>
+    </nav>
 
-      <div id="tabContent"></div>
-    </main>
+    <div id="tabContent"></div>
+  </main>
 
-    <script src="js/index.js"></script>
-  </body>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
