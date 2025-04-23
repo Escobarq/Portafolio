@@ -1,5 +1,5 @@
 :root {
-  --perfil-image: url("../public/yo.png");
+  --perfil-image: url(".././public/yo.png");
   --color-one: rgb(255, 255, 255);
   --color-two: rgb(0, 0, 0);
   --bg-dark: rgb(24, 24, 27);
