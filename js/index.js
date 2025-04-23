@@ -55,7 +55,7 @@ menuButton.addEventListener("click", () => {
         <a style="color:#fff" href="https://acortar.link/qOYWru">
         <button class="nav-button">
           <img
-            src="/public/cv.png"
+            src="./public/cv.png"
             style="width: 28px"
             height="28px"
             alt="Icon"
@@ -66,7 +66,7 @@ menuButton.addEventListener("click", () => {
           <a style="color:#fff" href="https://www.linkedin.com/in/juan-david-escobar-quezada-380430302/">
         <button class="nav-button" >
           <img
-            src="/public/linkedid.png"
+            src="./public/linkedid.png"
             style="width: 28px"
             height="28px"
             alt="Icon"
@@ -77,7 +77,7 @@ menuButton.addEventListener("click", () => {
             <a style="color:#fff" href="https://acortar.link/neITj2">
               <button class="nav-button" >
                 <img
-                  src="/public/whatsapp.png"
+                  src="./public/whatsapp.png"
                   style="width: 28px"
                   height="28px"
                   alt="Icon"
