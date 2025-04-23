@@ -55,11 +55,7 @@ menuButton.addEventListener("click", () => {
         <a style="color:#fff" href="https://acortar.link/qOYWru">
         <button class="nav-button">
           <img
-<<<<<<< HEAD
-            src="./public/assets/png/cv.png"  // ✅ Ruta corregida
-=======
-            src="/public/assets/png/cv.png"
->>>>>>> 446e9fd7f48dd14e2c809e64ba014e63221cb8de
+            src="../public/assets/png/cv.png"
             style="width: 28px"
             height="28px"
             alt="Icon"
@@ -70,11 +66,7 @@ menuButton.addEventListener("click", () => {
           <a style="color:#fff" href="https://www.linkedin.com/in/juan-david-escobar-quezada-380430302/">
         <button class="nav-button" >
           <img
-<<<<<<< HEAD
-            src="./public/assets/png/linkedid.png"  // ✅ Ruta corregida
-=======
-            src="/public/assets/png/linkedid.png"
->>>>>>> 446e9fd7f48dd14e2c809e64ba014e63221cb8de
+            src="../public/assets/png/linkedid.png"
             style="width: 28px"
             height="28px"
             alt="Icon"
@@ -85,11 +77,7 @@ menuButton.addEventListener("click", () => {
             <a style="color:#fff" href="https://acortar.link/neITj2">
               <button class="nav-button" >
                 <img
-<<<<<<< HEAD
-                  src="./public/assets/png/whatsapp.png"  // ✅ Ruta corregida
-=======
-                  src="/public/assets/png/whatsapp.png"
->>>>>>> 446e9fd7f48dd14e2c809e64ba014e63221cb8de
+                  src="../public/assets/png/whatsapp.png"
                   style="width: 28px"
                   height="28px"
                   alt="Icon"
