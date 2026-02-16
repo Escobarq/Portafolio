@@ -10,6 +10,7 @@ async function renderAbout() {
 
 const tabContent = document.getElementById("tabContent");
 const tabButtons = document.querySelectorAll(".tab-button");
+const storyRevealTargets = document.querySelectorAll("[data-story]");
 
 async function switchTab(tab) {
   tabButtons.forEach((button) => button.classList.remove("active"));
@@ -29,8 +30,34 @@ tabButtons.forEach((button) => {
   button.addEventListener("click", () => switchTab(button.dataset.tab));
 });
 
-// Initialize with projects tab
-switchTab("projects").then((r) => console.log("Projects tab loaded"));
+const revealTargets = document.querySelectorAll("[data-reveal]");
+
+function revealOnScroll() {
+  revealTargets.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      section.classList.add("fade-in");
+      section.style.animationDelay = `${index * 0.15}s`;
+    }
+  });
+}
+
+function attachHeroActions() {
+  document.querySelectorAll("[data-tab-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.tabTarget;
+      switchTab(target);
+      document.querySelector(".tab-wrapper")?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+tabButtons[0]?.click();
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", () => {
+  revealOnScroll();
+  attachHeroActions();
+});
 
 // Mobile menu toggle
 const menuButton = document.getElementById("menuButton");
